@@ -8,7 +8,6 @@ body{
 }
 
 nav{
-	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -17,7 +16,7 @@ nav{
 	box-sizing: border-box;
 }
 
-nav .logo{
+.logo{
 	padding: 22px 20px;
 	float: left;
 }
@@ -48,11 +47,71 @@ body{
 	background: url(../img/bg6.jpg);
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
 section.BG{
 	width: 100%;
-	height: 92vh;
+	height: 100vh;
+}
+
+.container {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: lightgrey;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 30%;
+  opacity: .7;
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  padding: 0 5px;
+}
+
+.column img {
+  margin-top: 10px;
+  vertical-align: middle;
+}
+
+.box{
+  width: 600px;
+  height: 285px;
+  margin: auto;
+  margin-top: 70px;
+  box-shadow: 0 0 5px 5px #6bb2ba;
+  background-color: #6bb2ba;
 }
 
 div.links{
