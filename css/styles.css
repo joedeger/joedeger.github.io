@@ -8,11 +8,11 @@ body{
 }
 
 nav{
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100px;
-	padding: 10px 100px;
+	padding: 0 100px;
 	box-sizing: border-box;
 }
 
@@ -43,14 +43,10 @@ nav a:hover{
 	text-underline-position: 2px;
 }
 
-body{
-  height: 100%;
+.sec1{
+	height: 100vh;	
 	background: url(../img/bg6.jpg);
 	background-size: cover;
-}
-
-div.BG{
-	width: 100%;
 }
 
 .container {
@@ -111,11 +107,60 @@ div.BG{
   height: 270px;
 }
 
+.sec2{
+	height: 100vh;
+	border-top: 2px solid black;
+}
+
+.wrapper{
+	margin: 10% 20%;
+}
+
+.resume{
+	border: 1px solid black;
+	width: 400px;
+}
+
+.resume h1{
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	background-color: grey;
+}
+
+.info button{
+	margin-left: 1px;
+	background-color: white;
+	border: none;
+	font-size: 20px;
+}
+
+.collapsible{
+	cursor: pointer;
+}
+
+.content{
+	margin-left: 25px;
+	max-height: 0;
+	overflow: hidden;
+}
+
+.content p{
+	margin: 3px 0;
+}
+
 div.links{
 	text-align: center;
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  margin: auto;
+	position: fixed;
+ 	bottom: 5px;
+  	left: 0;
+  	right: 0;
+  	margin: auto;
+}
+
+@media screen and (min-width: 1800px){
+	.box{
+		width: 800px;
+		height: 360px;
+	}
 }
