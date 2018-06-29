@@ -4,49 +4,40 @@
 }
 
 body{
-	font-family: Helvetica
+	font-family: Helvetica;
+	background-color: #f6f9fc;
 }
 
 nav{
-	position: fixed;
-	top: 0;
-	left: 0;
+	text-align: right;
 	width: 100%;
-	padding: 0 100px;
+	padding: 30px 100px;
 	box-sizing: border-box;
 }
 
-.logo{
-	padding: 22px 20px;
-	float: left;
-}
-
-nav ul{
-	list-style: none;
-	float: right;
-	display: flex;
-}
-
-nav ul li a{
-	line-height: 120px;
-	color: white;
+nav a{
+	color: #00b3b3;
 	font-weight: bold;
-	font-size: 100%;
-	padding: 12px 30px;
+	font-size: 15px;
+	padding: 12px 20px;
 	text-decoration: none;
 	text-transform: uppercase;
+	transition: color .3s;
 }
 
 nav a:hover{
-	color: lightgrey;
-	text-decoration: underline;
+	color: #006c6c;
 	text-underline-position: 2px;
 }
 
 .sec1{
-	height: 100vh;	
-	background: url(../img/bg6.jpg);
+	padding: 15px 0;
+	background-image: url("../img/beach.jpg");
+	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
 }
 
 .container {
@@ -86,6 +77,7 @@ nav a:hover{
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }
 
 .row {
@@ -98,41 +90,83 @@ nav a:hover{
 }
 
 .box{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 600px;
-  height: 270px;
+	margin: auto;
+ 	width: 500px;
+  	height: 225px;
 }
 
-.sec2{
-	height: 100vh;
-	border-top: 2px solid black;
+#wrapper{
+	padding: 20px 90px 15px 90px;
 }
 
-.wrapper{
-	margin: 10% 20%;
+#flexbox{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
-.resume{
-	border: 1px solid black;
-	width: 400px;
+.flex{
+	flex: 1;
+	display: flex;
+	justify-content: center;
 }
 
-.resume h1{
+.flex:first-child{
+	margin-right: auto;
+}
+
+.flex:last-child{
+	margin-left: auto;
+	justify-content: flex-start;
+}
+
+.flex div {
 	text-align: center;
-	text-transform: uppercase;
-	color: white;
-	background-color: grey;
+}
+
+#resume a{
+	text-decoration: none;
+	color: #f6f9fc;
+	background-color: #00b3b3;
+	padding: 10px;
+	border: 2px solid #00b3b3;
+	border-radius: 5px;
+	transition: .3s;
+}
+
+#resume a:hover{
+	background-color: #f6f9fc;
+	color: #00b3b3;
+}
+
+#quickResume{
+	border-radius: 5px;
+	width: 300px;
+	padding-bottom: 3px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+	transition: box-shadow .3s;
+	margin-bottom: 25px;
+}
+
+#quickResume:hover{
+	box-shadow: 0 6px 16px 0 rgba(0,0,0,0.5);	
+}
+
+#quickResume h2{
+	color: #e6e6e6;
+	background-color: #00b3b3;
+	text-align: center;
 }
 
 .info button{
+	width: 100%;
+	text-align: left;
 	margin-left: 1px;
-	background-color: white;
+	background-color: #f2f2f2;
 	border: none;
 	font-size: 20px;
+	outline: none;
 }
 
 .collapsible{
@@ -140,27 +174,79 @@ nav a:hover{
 }
 
 .content{
-	margin-left: 25px;
+	background-color: #f2f2f2;
 	max-height: 0;
 	overflow: hidden;
+	transition: .2s;
 }
 
-.content p{
-	margin: 3px 0;
+.content ul{
+	padding-left: 40px;
+	text-align: left;
 }
 
-div.links{
+#picture{
+	width: 170px;
+	height: 200px;
+	border: 4px solid #00b3b3;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+	transition: box-shadow .3s;
+}
+
+#picture:hover{
+	box-shadow: 0 6px 16px 0 rgba(0,0,0,0.5);
+}
+
+#picture img{
+	border-radius: 5px;
+	width: 170px;
+	height: 200px;
+}
+
+#contact{
+	width: 280px;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+	transition: box-shadow .3s;
+	margin-bottom: 25px;
+}
+
+#contact:hover{
+	box-shadow: 0 6px 16px 0 rgba(0,0,0,0.5);
+}
+
+#contact h2{
+	color: #e6e6e6;
+	background-color: #00b3b3;
 	text-align: center;
-	position: fixed;
- 	bottom: 5px;
-  	left: 0;
-  	right: 0;
-  	margin: auto;
+	border-bottom: 1px solid black;
 }
 
-@media screen and (min-width: 1800px){
-	.box{
-		width: 800px;
-		height: 360px;
-	}
+#contactLabel p{
+	border-right: 1px solid black;
+}
+
+#contactLabel p:last-child{	
+	border-top: 1px solid black;
+}
+
+#contactLabel{
+	float: left;
+	text-align: left;
+}
+
+#contactInfo{
+	position: relative;
+	right: 0;
+	text-align: right;
+}
+
+#contactInfo p:last-child{
+	border-top: 1px solid black;
+}
+
+#links a{
+	margin: 0 5px;
 }
