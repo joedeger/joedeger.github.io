@@ -250,3 +250,147 @@ nav a:hover{
 #links a{
 	margin: 0 5px;
 }
+
+@media only screen and (min-width: 1800px){
+	/*change nav bar sizes*/
+
+	.box{
+		width: 800px;
+		height: 360px;
+	}
+
+	#picture{
+		width: 272px;
+		height: 320px;
+	}
+
+	#picture img{
+		width: 272px;
+		height: 320px;
+	}
+
+	#flexbox{
+		margin-top: 30px;
+	}
+
+	#quickResume{
+		width: 480px;
+		font-size: 24px;
+	}
+
+	#contact{
+		margin-bottom: 60px;
+		width: 448px;
+		font-size: 24px;
+	}
+
+	.info button{
+		font-size: 30px;
+	}
+
+	#resume a{
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.sec1{
+		max-height: 0px;
+		overflow: hidden;
+		padding: 0;
+		border: none;
+	}
+
+	.box{
+		max-height: 0px;
+		overflow: hidden;
+	}
+
+	nav{
+		background-color: #ededed;
+		padding: 0;
+		text-align: center;
+		border-bottom: 4px solid #00b3b3;
+		position: fixed;
+	}
+
+	nav div{
+		padding: 10px 0;
+	}
+
+	nav a{
+		font-size: 20px;
+		padding: 5px;
+		margin: 10px;
+	}
+
+	#logo{
+		max-height: 0;
+		overflow: hidden;
+	}
+
+	#flexbox{
+		flex-direction: column;
+		align-items: center;
+		margin-top: 80px;
+	}
+
+	#order1{
+		order: 1;
+	}
+
+	#order2{
+		order: 2;
+	}
+
+	#order3{
+		order: 3;
+	}
+
+	.flex{
+		margin: 15px 0;
+	}
+
+	.flex:last-child{
+		margin-left: 0;
+	}
+
+	.flex:first-child{
+		margin-right: 0;
+	}
+
+	#wrapper{
+		padding: 0;
+	}
+
+	#picture{
+		width: 260px;
+		height: 330px;
+	}
+
+	#picture img{
+		width: 260px;
+		height: 330px;
+	}
+
+	#quickResume{
+		font-size: 25px;
+		margin-bottom: 35px;
+	}
+
+	.info button{
+		font-size: 30px;
+	}
+
+	#resume a{
+		font-size: 22px;
+	}
+
+	#infoBox{
+		font-size: 20px;
+	}
+
+	#contact{
+		font-size: 18px;
+	}
+}
