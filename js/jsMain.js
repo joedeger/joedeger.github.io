@@ -165,6 +165,11 @@ $('#calendar').fullCalendar({
 			title : 'DWT ',
 			start : '2019-03-22',
 			info: 'March22-19-1-'
+		},
+		{
+			title : 'DWT 21.10',
+			start : '2019-03-25',
+			info: 'March25-19-1-'
 		}/*,
 		{
 			title : '',
