@@ -24,6 +24,10 @@ a {
 	text-decoration: none;
 }
 
+.fc-unthemed td.fc-today {
+	background: inherit;
+}
+
 button {
 	background-color: inherit;
 	border: none;
@@ -110,6 +114,7 @@ nav {
 			#info {
 				.info-section {
 					display: none;
+					min-height: 25em;
 				}
 				.active-section {
 					display: block;
@@ -120,6 +125,19 @@ nav {
 				}
 				#plan {
 					min-width: 100%;
+					text-align: center;
+					div {
+						p {
+							display: inline-block;
+						}
+					}
+					p {
+						margin: 1em;
+  						color: #dde6eb;
+					}
+					h2 {
+						margin-top: .5em;
+					}
 				}
 			}
 		}

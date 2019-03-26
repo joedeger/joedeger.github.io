@@ -169,7 +169,7 @@ $('#calendar').fullCalendar({
 		{
 			title : 'DWT 21.10',
 			start : '2019-03-25',
-			info: 'March25-19-1-'
+			info: ['March25-19-1-', '+0.69%', '7.23', '7.28', '/CL showed a descending pattern (lower lows/lower highs, breaking below middle VWAP). Entered after the EMA rejection at the VWAP', 'Placed a limit sell order at the same price level it hit last time since I was at school and not fully focused and didn\'t want to miss a potential bounce area. I was filled when I wasn\'t watching', 'Good entry and understanding of direction. Could have made more if I was paying attention']
 		}/*,
 		{
 			title : '',
@@ -180,14 +180,25 @@ $('#calendar').fullCalendar({
 
 	eventClick: function(event) {
 		stock = event.title.split(' ')[0];
-		etfImgLink = 'media/' + event.info + stock + '.PNG';
+		etfImgLink = 'media/' + event.info[0] + stock + '.PNG';
 		if (stock == 'UWT' || stock == 'DWT') {
-			futureImgLink = 'media/' + event.info + 'CL.PNG';
+			futureImgLink = 'media/' + event.info[0] + 'CL.PNG';
 		} else if (stock == 'DGAZ' || stock == 'UGAZ') {
-			futureImgLink = 'media/' + event.info + 'NG.PNG';
+			futureImgLink = 'media/' + event.info[0] + 'NG.PNG';
 		}
 		document.getElementById('etfImg').src = etfImgLink;
 		document.getElementById('futureImg').src = futureImgLink;
+		document.getElementById('PLpercent').innerHTML = event.info[1];
+		if (event.info[1].charAt(0) == '+') {
+			document.getElementById('PLpercent').style.color = '#92cd89';
+		} else {
+			document.getElementById('PLpercent').style.color = '#F9694A';
+		}
+		document.getElementById('entry').innerHTML = 'Entry: ' + event.info[2];
+		document.getElementById('exit').innerHTML = 'Exit: ' + event.info[3];
+		document.getElementById('whyEntry').innerHTML = event.info[4];
+		document.getElementById('whyExit').innerHTML = event.info[5];
+		document.getElementById('review').innerHTML = event.info[6];
 		document.getElementsByClassName('tab-section')[0].click();
 	},
 

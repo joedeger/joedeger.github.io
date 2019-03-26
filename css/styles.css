@@ -97,14 +97,26 @@ nav div a:hover {
 }
 #trading #trades #infoSection #info .info-section {
   display: none;
+  min-height: 25em;
 }
 #trading #trades #infoSection #info .active-section {
   display: block;
 }
 #trading #trades #infoSection #info img {
-  width: 100%;  
+  width: 100%;
   min-width: 100%;
 }
 #trading #trades #infoSection #info #plan {
   min-width: 100%;
+  text-align: center;
+}
+#trading #trades #infoSection #info #plan p {
+  margin: 1em;
+  color: #dde6eb;
+}
+#trading #trades #infoSection #info #plan div p {
+  display: inline-block;
+}
+#trading #trades #infoSection #info #plan h2 {
+  margin-top: .5em;
 }
