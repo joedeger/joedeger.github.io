@@ -50,6 +50,9 @@ nav div a:hover {
 .section {
   padding: 100px 0;
 }
+#aboutMe {
+  background-color: #dde6eb;
+}
 #trading {
   display: flex;
   flex-direction: column;

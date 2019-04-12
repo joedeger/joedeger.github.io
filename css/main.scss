@@ -70,13 +70,17 @@ nav {
 	padding: 100px 0;
 }
 
+#aboutMe {
+	background-color: $grey;
+}
+
 #trading {
 	display: flex;
   	flex-direction: column;
   	justify-content: flex-start;
   	align-items: center;
   	min-height: 100vh;
-  	background-color: #354b58;
+  	background-color: $blue;
 	#chart {
 		box-shadow: 0px 0px 10px 5px $dark;
 		margin-bottom: 2em;
