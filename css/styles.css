@@ -4,8 +4,10 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Helvetica;
   /*color: #92cd89;*/
+}
+body {  
+  font-family: Helvetica;
 }
 a {
   text-decoration: none;
@@ -46,19 +48,162 @@ nav div a {
 nav div a:hover {
   color: #5ab34d;
   transition: 0.3s;
-}
+}/*
+.pageLink{
+  transition: all 0.3s ease;
+  animation: ease;
+}*/
 .section {
   padding: 100px 0;
+  padding: 5em 6em;
+}
+#header {
+  opacity: .9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../media/laptop.jpg');
+  min-height: 100vh;
+  text-align: center;
+  font-size: 2.5em;
+  color: #131b20;
+  font-family: cursive;
+}
+#header #quote {
+  padding-top: 6em;
 }
 #aboutMe {
   background-color: #dde6eb;
+  display: flex;
+  justify-content: space-around;
+}
+#aboutMe div {
+  margin: 2.5em 3em 0 3em;
+}
+#aboutMe div p {
+  margin-top: 1em;
+  font-size: 1.3em;
+}
+#aboutMe div a i {
+  margin: 2em 1em 0 1em;
+  color: #354b58;
+}
+#aboutMe img {
+  opacity: .9;
+  border-radius: 1em;
+  border: 4px solid #92cd89;
+}
+#resume {
+  background-color: #4d6d80;
+  min-height: 80vh;
+}
+#resume #goals{
+  margin-top: 2em;
+  color: #92cd89;
+  font-size: 2.5em;
+}
+#resume #goals2 {
+  color: #dde6eb;
+  font-size: 1.5em;
+}
+#resume #buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5em;
+}
+#resume #buttons button {
+  background-color: #92cd89;
+  padding: 1em 2.5em;
+  border-radius: 1em;
+  outline: none;  
+  font-size: 1.4em;
+}
+#resume #buttons a {
+  background-color: #92cd89;
+  padding: 1em 2.5em;
+  border-radius: 1em;
+  outline: none;  
+  font-size: 1.4em;
+  color: black;
+}
+#resume #buttons a:hover {
+  background-color: #5ab34d;
+  transition: 0.3s;
+}
+#resume #buttons button:hover {
+  background-color: #5ab34d;
+  transition: 0.3s;
+}
+#resume #buttons .active-button {
+  background-color: #5ab34d;
+}
+#resume .resume-section {
+  color: #dde6eb;
+  display: none;
+  margin: 0 5em;  
+}
+#resume .resume-section h2 {
+  margin: 1em 0;
+  font-size: 1.7em;
+  text-decoration: underline;
+}
+#resume .resume-section p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+#resume .resume-section.active-resume-section {
+  display: block;
+}
+#resume #skills.active-resume-section {
+  display: flex;
+  justify-content: space-around;
+}
+#resume #experience ul li {
+  font-size: 1.2em;
+}
+#projects {
+  background-color: #dde6eb;
+}
+#projects .project {
+  display: flex;
+  margin-bottom: 2em;
+}
+#projects .project div {
+  margin: 0 3em;
+}
+#projects h2 {
+  color: #5ab34d;
+  text-decoration: underline;
+}
+#projects p {
+  margin: 1em 0;
+  font-size: 1.3em;
+}
+#projects ul {
+  font-size: 1em;
+  color: #5ab34d;
+  list-style: none;
+  display: inline-block;
+  margin-left: 15em;
+  font-weight: bold;
+}
+#projects ul li {
+  font-size: 1em;
+  color: black;
+  font-weight: initial;
+}
+#projects img {
+  transform: rotate(-90deg);
+  width: 30%;
+  box-shadow: 0px 0px 10px 2px #263844;
+}
+#projects img.dontTransform {
+  transform: none;
 }
 #trading {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
   background-color: #354b58;
 }
 #trading #chart {

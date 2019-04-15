@@ -10,17 +10,7 @@ var data = [
 	}
 ];
 
-Plotly.newPlot('chart', data);
-
-function calculateProfit(prices, quantities, commission) {
-	sell = prices[prices.length - 1];
-	profit = 0;
-
-	for (var i = 0; i < prices.length - 2; i++) {
-		profit  += ((((sell - prices[i]) / sell) * (quantities[i] * prices[i])) - commission);
-	}
-	return profit;
-}
+/*Plotly.newPlot('chart', data);*/
 
 var coll = document.getElementsByClassName('tab-section');
 var i;
@@ -31,31 +21,57 @@ for (i = 0; i < coll.length; i++) {
   	infoSections = document.getElementsByClassName('info-section');
   	for (i = 0; i < tabs.length; i++) {
   		if(tabs[i].classList.contains('active-tab')) {
-  			console.log('toggle active-tab');
   			tabs[i].classList.toggle('active-tab');
-  			console.log('toggle active-section');
   			infoSections[i].classList.toggle('active-section');
   		}
   	}
-  	console.log('toggle active-tab');
     this.classList.toggle("active-tab");
     switch(this.textContent) {
     	case 'ETF':
-    		console.log('toggling etf active-section');
     		infoSections[0].classList.toggle('active-section');
     		break;
     	case 'Future':
-    		console.log('toggling future active-section');
     		infoSections[1].classList.toggle('active-section');
     		break;
     	case 'Notes':
-    		console.log('toggling plan active-section');
     		infoSections[2].classList.toggle('active-section');
     		break;
     	default:
     		break;
     }
   });
+}
+
+coll = document.getElementsByTagName('button');
+
+for (i = 0; i < coll.length; i++) {
+	coll[i].addEventListener('click', function() {
+		buttons = document.getElementsByTagName('button');
+		resumeSections = document.getElementsByClassName('resume-section');
+		for (i = 0; i < buttons.length; i++) {
+  			if(buttons[i].classList.contains('active-button')) {
+  				buttons[i].classList.toggle('active-button');
+  				resumeSections[i].classList.toggle('active-resume-section');
+  			}
+  		}
+    	this.classList.toggle("active-button");
+    	switch(this.textContent) {
+    		case 'Education':
+    			resumeSections[0].classList.toggle('active-resume-section');
+    			break;
+    		case 'Co-op Experience':
+    			resumeSections[1].classList.toggle('active-resume-section');
+    			break;
+    		case 'Skills':
+    			resumeSections[2].classList.toggle('active-resume-section');
+    			break;
+    		case 'Leadership':
+    			resumeSections[3].classList.toggle('active-resume-section');
+    			break;
+    		default:
+    			break;
+    	}
+  	});
 }
 
 $('#plan').css({
@@ -67,7 +83,6 @@ $('#eftImg').css({
 $('#futureImg').css({
 	'width': ($('#info').width() + 'px')
 });
-
 
 $('#calendar').fullCalendar({
 	height: 500,
